@@ -34,3 +34,5 @@ webapp
 .flattened-pom.xml
 
 docker-compose_datadir
+
+contrib/chart/charts/

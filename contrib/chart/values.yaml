@@ -15,9 +15,9 @@ jdbcconfig:
 config:
   replicaCount: 1
   image:
-    repository: camptocamp/gs-cloud-config-service
+    repository: geoservercloud/geoserver-cloud-config
     pullPolicy: Always
-    tag: ""
+    tag: "1.0-SNAPSHOT"
 
     command:
       - dockerize
@@ -60,9 +60,9 @@ config:
 gateway:
   replicaCount: 1
   image:
-    repository: camptocamp/gs-cloud-gateway
+    repository: geoservercloud/geoserver-cloud-gateway
     pullPolicy: Always
-    tag: ""
+    tag: "1.0-SNAPSHOT"
 
   command:
     - dockerize
@@ -105,9 +105,9 @@ gateway:
 discovery:
   replicaCount: 1
   image:
-    repository: camptocamp/gs-cloud-discovery-service
+    repository: geoservercloud/geoserver-cloud-discovery
     pullPolicy: Always
-    tag: ""
+    tag: "1.0-SNAPSHOT"
 
   env:
     - name: JAVA_OPTS
@@ -134,9 +134,9 @@ discovery:
 webui:
   replicaCount: 1
   image:
-    repository: camptocamp/gs-cloud-web-ui
+    repository: geoservercloud/geoserver-cloud-webui
     pullPolicy: Always
-    tag: ""
+    tag: "1.0-SNAPSHOT"
   command:
     - dockerize
     - -wait
@@ -178,9 +178,9 @@ webui:
 rest:
   replicaCount: 1
   image:
-    repository: camptocamp/gs-cloud-restconfig-v1
+    repository: geoservercloud/geoserver-cloud-rest
     pullPolicy: Always
-    tag: ""
+    tag: "1.0-SNAPSHOT"
   command:
     - dockerize
     - -wait
@@ -222,9 +222,9 @@ rest:
 wfs:
   replicaCount: 1
   image:
-    repository: camptocamp/gs-cloud-wfs
+    repository: geoservercloud/geoserver-cloud-wfs
     pullPolicy: Always
-    tag: ""
+    tag: "1.0-SNAPSHOT"
   command:
     - dockerize
     - -wait
@@ -265,9 +265,9 @@ wfs:
 wms:
   replicaCount: 1
   image:
-    repository: camptocamp/gs-cloud-wms
+    repository: geoservercloud/geoserver-cloud-wms
     pullPolicy: Always
-    tag: ""
+    tag: "1.0-SNAPSHOT"
   command:
     - dockerize
     - -wait
@@ -309,9 +309,9 @@ wms:
 wcs:
   replicaCount: 1
   image:
-    repository: camptocamp/gs-cloud-wcs
+    repository: geoservercloud/geoserver-cloud-wcs
     pullPolicy: Always
-    tag: ""
+    tag: "1.0-SNAPSHOT"
   command:
     - dockerize
     - -wait
