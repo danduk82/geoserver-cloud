@@ -29,8 +29,8 @@ jobs:
     #     distribution: 'temurin'
     #     java-version: '21'
     #     cache: 'maven'
-    # - name: Install CI dependencies
-    #   run: python3 -m pip install --user --requirement=ci/requirements.txt
+    - name: Install CI dependencies
+      run: python3 -m pip install --user --requirement=ci/requirements.txt
 
     # - name: Validate source code formatting
     #   run: make lint
