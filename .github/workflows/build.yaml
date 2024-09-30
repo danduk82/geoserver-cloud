@@ -48,7 +48,7 @@ jobs:
         make acceptance-tests
 
     - name: Print docker compose logs
-      run: (cd docker && c2cciutils-docker-logs)
+      run: (cd compose && c2cciutils-docker-logs)
       if: always()
 
     # - name: Remove project jars from cached repository

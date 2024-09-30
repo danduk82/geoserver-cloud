@@ -88,4 +88,5 @@ build-acceptance:
 acceptance-tests:
 acceptance-tests: build-acceptance
 	TAG=$(TAG) docker compose $(COMPOSE_ACCEPTANCE_OPTIONS) up -d
+	sleep 30
 	TAG=$(TAG) docker compose $(COMPOSE_ACCEPTANCE_OPTIONS) exec -T acceptance pytest . -vvv --color=yes
