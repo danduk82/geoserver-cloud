@@ -25,33 +25,33 @@ jobs:
       with:
         submodules: recursive
 
-    # - name: Setup Java
-    #   uses: actions/setup-java@v2
-    #   with:
-    #     distribution: 'temurin'
-    #     java-version: '21'
-    #     cache: 'maven'
+    - name: Setup Java
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'temurin'
+        java-version: '21'
+        cache: 'maven'
 
-    # - name: Validate source code formatting
-    #   run: make lint
+    - name: Validate source code formatting
+      run: make lint
 
-    # - name: Build without tests
-    #   run: |
-    #     make install
+    - name: Build without tests
+      run: |
+        make install
 
-    # - name: Test
-    #   run: |
-    #     make test
+    - name: Test
+      run: |
+        make test
 
-    # - name: Build images
-    #   run: |
-    #     make build-image
+    - name: Build images
+      run: |
+        make build-image
 
     - name: Run acceptance tests
       run: |
         make acceptance-tests
 
-    # - name: Remove project jars from cached repository
-    #   run: |
-    #     rm -rf ~/.m2/repository/org/geoserver
-    #     find ~/.m2/repository -name "*SNAPSHOT*" -type d | xargs rm -rf {}
+    - name: Remove project jars from cached repository
+      run: |
+        rm -rf ~/.m2/repository/org/geoserver
+        find ~/.m2/repository -name "*SNAPSHOT*" -type d | xargs rm -rf {}
